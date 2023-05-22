@@ -10,7 +10,7 @@ To run this code, you need to have the following:
 
 - Arduino board (e.g., Arduino Uno)
 - Arduino IDE or compatible software
-- MPV media player (or any other media player that can be launched with the specified command: `media_player_path --fullscreen current_video`)
+- MPV media player (or any other media player that can be launched with the specified command: `media_player_path --fullscreen current_video`
 - Python (if running the Python code directly)
 - Required Python libraries: `subprocess`, `logging`, `serial`, `json`, `os`, `platform`, `sys`
 - (Optional) Configurable settings file: `settings.ini` (included)
@@ -31,24 +31,22 @@ Here is a step-by-step guide on how to use the code:
 2. Upload the Arduino code (`Video_Control_Transmeter.ino`) to the Arduino board using the Arduino IDE or compatible software.
 3. Make sure you have the MPV media player (or any other compatible media player) installed on your system.
 4. (Optional) Modify the necessary settings in the code or the settings.ini file:
-
-- Specify the video folder path (`video_folder`) where your video files are located.
-- Specify the Arduino Serial Port (`serial_port`) to establish a serial connection.
-- Specify the desired baud rate (`baudrate`) for serial communication.
-- Specify the path to the media player executable file (`media_player_path`).
-- Specify the desired number to use to stop the program (`stop_number`).
+   - Specify the video folder path (`video_folder`) where your video files are located.
+   - Specify the Arduino Serial Port (`serial_port`) to establish a serial connection.
+   - Specify the desired baud rate (`baudrate`) for serial communication.
+   - Specify the path to the media player executable file (`media_player_path`).
+   - Specify the desired number to use to stop the program (`stop_number`).
 
 5. Organize your video files in the video folder specified.
 6. Run the code by either:
-
-- Running the Python code (`Video Play From Arduino - Universal.py`) using Python and the required libraries.
-- Running the executable file (`Video Play From Arduino - Universal.exe`) directly without needing to install Python.
+   - Running the Python code (`Video Play From Arduino - Universal.py`) using Python and the required libraries.
+   - Running the executable file (`Video Play From Arduino - Universal.exe`) directly without needing to install Python.
 
 7. The code will establish a serial port connection with the Arduino and listen for commands.
 8. When a command is received from the Arduino, the code will check if it matches the stop number. If yes, the program will stop.
 
-- If the received command is a valid number, the code will play the corresponding video in fullscreen mode using the specified media player.
-- If the received command is not a valid number, it will be logged as an error.
+   - If the received command is a valid number, the code will play the corresponding video in fullscreen mode using the specified media player.
+   - If the received command is not a valid number, it will be logged as an error.
 
 9. You can stop the program by sending the stop number from the Arduino or entering it manually.
 
